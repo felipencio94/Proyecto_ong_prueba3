@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>ONG Ayuda a un peludo</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        {% load static %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+      
+        <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
+            <header class="jumbotron">              
+                <h1 class="text-center">
+                    <img src="{% static 'core/img/logo.png' %}" class="rounded-circle" alt="logo"/>
+                    <span class="text-nowrap">ONG Ayuda a un Peludo</span>
+                </h1>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
+                </p>
+            </header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <img src="{% static 'core/img/logo.png' %}" class="rounded-circle" alt="logo"/>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mascotas
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/seccion-gatos">Gatos</a>
+                        <a class="dropdown-item" href="/seccion-perros">Perros</a>
+                        <div class="dropdown-divider"></div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/proveedores">Proveedores</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <button type="button" class="btn btn-warning mr-sm-2" data-toggle="modal" data-target="#exampleModal" id="btn_login">Iniciar Sesión</button>
+
+                    <a class="btn btn-warning btn-outline" data-toggle="modal" data-target="#modal_registro" id="btn_registro">Registrate!</a>
+
+                    
+
+                  </form>
+                </div>
+              </nav>
+            <main class="flex-fill">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Inicio</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Voluptatum error quisquam dolorum velit id, iste, hic laborum 
+                            laboriosam quibusdam aliquid recusandae eveniet sapiente veritatis 
+                            ratione ea saepe aperiam officiis rem.
+                        </p>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-12">
+                        <section>
+                            <h3>Integrantes</h3>
+                            <ul>
+                                <li>Pablo Cardenas</li>
+                                <li>Felipe Fuentealba</li>
+                                <li>Cristobal Santibañez</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-12">
+                        <section>
+                            <h3>Mascotas</h3>
+                        </section>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <a href="seccion-perros.html" title="Perros">
+                            <img src="{% static 'core/img/seccion-perros.jpg' %}" title="Perros" alt="Perros" class="rounded-circle img-thumbnail" width="250"  />
+                        </a>
+                    </div>
+                    <div class="col-6 text-center">
+                        <a href="seccion-gatos.html" title="Gatos">
+                            <img src="{% static 'core/img/seccion-gatos.jpeg' %}" title="Gatos" alt="Gatos"  class="rounded-circle img-thumbnail" width="250"/>
+                        </a>
+                    </div>
+                </div>        
+            </main>
+            <footer>
+                <div class="row bg-dark">
+                    <div class="col-12 text-center text-light">
+                            Programación Web<br/>
+                            Instituto Profesional Duoc UC
+                    </div>
+                </div>
+            </footer>
+        </div>  
+        
+
+         <!-- Modal iniciar sesion-->
+
+         <!-- Modal -->
+
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ingresa Tus datos</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">(*)Nombre Usuario:</label>
+                    <input type="email" class="form-control" id="txt_usuario" aria-describedby="emailHelp">
+                    <small id="lbl_usuario" class="form-text text-muted">Campo obligatorio</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">(*)Contraseña:</label>
+                    <input type="password" class="form-control" id="txt_contrasena" aria-describedby="emailHelp">
+                    <small id="lbl_contrasena" class="form-text text-muted">Campo obligatorio</small>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a class="btn btn-warning btn-outline" href="login-exitoso.html" role="button" id="btn_registro_modal">Ingresar</a>
+                  <button type="button" class="btn btn-secondary btn-warning " data-dismiss="modal" id="btn_recu_datos">Olvidaste tus Datos?</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Modal registrate! -->
+          <div class="modal fade" id="modal_registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ingresa Tus datos</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">(*)Nombre Usuario:</label>
+                    <input type="text" class="form-control" id="txt_usuario" aria-describedby="emailHelp">
+                    <small id="lbl_usuario" class="form-text text-muted">Campo obligatorio</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">(*)E-mail:</label>
+                    <input type="email" class="form-control" id="txt_mail" aria-describedby="emailHelp">
+                    <small id="lbl_mail_r" class="form-text text-muted">Campo obligatorio</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">(*)Crear contraseña:</label>
+                    <input type="password" class="form-control" id="txt_contrasena" aria-describedby="emailHelp">
+                    <small id="lbl_contrasena" class="form-text text-muted">Campo obligatorio</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">(*)Confirmar contraseña:</label>
+                    <input type="password" class="form-control" id="txt_contrasena_conf" aria-describedby="emailHelp">
+                    <small id="lbl_contrasena" class="form-text text-muted">Campo obligatorio</small>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a class="btn btn-warning btn-outline" href="login-exitoso.html" role="button" id="btn_registro_modal">Registrate!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </body>
+
+    <script src="{% static 'core/static/js/html.js' %}"></script>
+</html>
