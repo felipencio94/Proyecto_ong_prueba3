@@ -1,8 +1,7 @@
-from rest_usuario.viewslogin import login
 from django.urls import path
-from .views import lista_proveedores,modificar_proveedor,actualizar_proveedor
+from rest_proveedores.views import lista_proveedores,modificar_proveedores,actualizar_proveedores
 urlpatterns = [
     path('proveedores', lista_proveedores, name="lista_proveedores"),
-    path('proveedor', modificar_proveedor, name="modificar_proveedor"),
-    path('proveedor/<id>', actualizar_proveedor, name="actualizar_proveedor"),
-    path('login',login,name="login"),
+    path('proveedor', modificar_proveedores, name="modificar_proveedores"),
+    path('proveedor/<id>', actualizar_proveedores, name="actualizar_proveedores"),
+]

@@ -14,14 +14,14 @@ from rest_framework.permissions import IsAuthenticated
 @api_view(['GET'])
 @permission_classes((IsAuthenticated,))
 def lista_proveedores(request):
-    proveedor = Proveedor.objects.all()
-    serializers = ProveedorSerializer(proveedor, many=True)
+    proveedores = Proveedor.objects.all()
+    serializers = ProveedorSerializer(proveedores, many=True)
     return Response(serializers.data)
 
 @csrf_exempt
 @api_view(['POST'])
 @permission_classes((IsAuthenticated,))
-def modificar_proveedor(request):
+def modificar_proveedores(request):
     if request.method =='POST':
         data = JSONParser().parse(request)
         serializer = ProveedorSerializer(data = data)
@@ -33,22 +33,22 @@ def modificar_proveedor(request):
 @csrf_exempt
 @api_view(['GET','PUT','DELETE'])
 @permission_classes((IsAuthenticated))
-def actualizar_proveedor(request,id):
+def actualizar_proveedores(request,id):
     try:
-        proveedor = Proveedor.objects.get(rut=id)
+        proveedores = Proveedor.objects.get(rut=id)
     except Proveedor.DoesNotExist:
         return Response(status=status.HTTP_400_BAD_REQUEST)
     if request.method == 'GET':
-        serializer = ProveedorSerializer(proveedor)
+        serializer = ProveedorSerializer(proveedores)
         return Response(serializer.data)
     if request.method == 'PUT':
         data = JSONParser().parse(request)
-        serializer = ProveedorSerializer(proveedor, data=data)
+        serializer = ProveedorSerializer(proveedores, data=data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         else:
             return Response(serializer.errors,status =status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
-        proveedor.delete()
+        proveedores.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
