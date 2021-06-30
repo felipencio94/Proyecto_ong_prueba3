@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'rest_proveedores',
+    'rest_framework.authtoken'
     ]
 
 REST_FRAMEWORK = {
@@ -58,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ong.urls'
+ROOT_URLCONF = 'Proyecto_ong.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ong.wsgi.application'
+WSGI_APPLICATION = 'Proyecto_ong.wsgi.application'
 
 
 # Database
